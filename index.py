@@ -479,8 +479,8 @@ def main():
 
     windows = []
 
-    for w in pygetwindow.getWindowsWithTitle('bombcrypto - Google Chrome'):
-        # print(w.title)
+    for w in pygetwindow.getWindowsWithTitle('bombcrypto'):
+        print(w.title)
         # print(w.size)
         windows.append({
             "window": w,
