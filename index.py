@@ -479,7 +479,7 @@ def main():
 
     windows = []
 
-    for w in pygetwindow.getWindowsWithTitle('bombcrypto'):
+    for w in pygetwindow.getWindowsWithTitle('bombcrypto -'):
         print(w.title)
         # print(w.size)
         windows.append({
@@ -499,7 +499,7 @@ def main():
             logger('changing to another window...\n')
             last["window"].activate()
             # last["window"].resizeTo(1300, 740)
-            last["window"].resizeTo(697, 744)
+            last["window"].resizeTo(697, 730)
             last["window"].moveTo(0, 0)
             # last["window"].maximize()
             time.sleep(2)
