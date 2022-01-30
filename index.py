@@ -499,7 +499,7 @@ def main():
             logger('changing to another window...\n')
             last["window"].activate()
             # last["window"].resizeTo(1300, 740)
-            last["window"].resizeTo(697, 730)
+            last["window"].resizeTo(697, 700)
             last["window"].moveTo(0, 0)
             # last["window"].maximize()
             time.sleep(2)
@@ -508,10 +508,6 @@ def main():
             #     last["check_for_captcha"] = now
             #     solveCaptcha(pause)
 
-            if now - last["login"] > addRandomness(t['check_for_login'] * 60):
-                sys.stdout.flush()
-                last["login"] = now
-                login()
             
             if now - last["heroes"] > addRandomness(t['send_heroes_for_work'] * 60):
                 last["heroes"] = now
@@ -521,6 +517,14 @@ def main():
                 # solveCaptcha(pause)
                 last["refresh_heroes"] = now
                 refreshHeroesPositions()
+                
+                
+            if now - last["login"] > addRandomness(t['check_for_login'] * 60):
+                print(111111)
+                sys.stdout.flush()
+                last["login"] = now
+                login()
+                print(22222)
 
             # if now - last["new_map"] > t['check_for_new_map_button']:
             #     last["new_map"] = now
