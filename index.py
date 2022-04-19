@@ -504,7 +504,7 @@ def main():
             logger('changing to another window...\n')
             last["window"].activate()
             # last["window"].resizeTo(1300, 740)
-            last["window"].resizeTo(697, 700)
+            last["window"].resizeTo(800, 700)
             last["window"].moveTo(0, 0)
             # last["window"].maximize()
             time.sleep(2)
